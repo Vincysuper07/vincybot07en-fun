@@ -141,16 +141,14 @@ class Fun(Cog):
         else:
             await ctx.send(f"{bot_choice.value} We're square {author.mention}!")
             
-@commands.command(name="8ball",aliases=["8"])
+    @commands.command(name="8ball",aliases=["8"])
     async def _8ball(self, ctx, *, question: str):
         """Ask 8 ball a question.
+
         Question must end with a question mark.
         """
-        embed = discord.Embed(title='Question: | :8ball:', description=question, color=0x2332e4)
-        embed.add_field(name='Answer:', value=choice(self.ball) if question != "testù?" else 'testù, testù, testù testù! testù testù testù', inline=False)
-        
         if question.endswith("?") and question != "?":
-            await ctx.send(embed=embed)
+            await ctx.send((choice(self.ball)))
         else:
             await ctx.send("That doesn't look like a question.")
 
