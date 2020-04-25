@@ -148,7 +148,7 @@ class Fun(Cog):
         Question must end with a question mark.
         """
         if question.endswith("?") and question != "?":
-            await ctx.send((choice(self.ball)))
+            await ctx.send((choice(self.ball) if question != "testù?" else "testù, testù, testù testù! testù testù testù"))
         else:
             await ctx.send("That doesn't look like a question.")
 
