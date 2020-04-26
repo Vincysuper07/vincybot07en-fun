@@ -76,7 +76,8 @@ class Fun(Cog):
         "My reply is no",
         "My sources say no",
         "Outlook not so good",
-        "Very doubtful"
+        "Very doubtful",
+        "testù, testù, testù testù! testù testù testù"
     ]
     def __init__(self,bot):
         super().__init__()
