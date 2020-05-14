@@ -90,9 +90,9 @@ class Fun(Cog):
         response = await self.bot.session.get("https://inspirobot.me/api?generate=true")
         gen = (await response.content.readline()).decode('UTF-8')
         color = discord.Color.green()
-        embed = discord.Embed(title = "InspiroBot", color=color)
-        embed.set_image(url=f"{gen}")
-        await ctx.send(embed=embed)
+        e = discord.Embed(title = "InspiroBot", color=color)
+        e.set_image(url=f"{gen}")
+        await ctx.send(embed=e)
 
     @commands.command()
     async def choose(self, ctx, *choices):
