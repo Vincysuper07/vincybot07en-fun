@@ -91,7 +91,7 @@ class Fun(Cog):
             gen = (await response.content.readline()).decode('UTF-8')
             red = discord.Color.red()
             embed = discord.Embed(title = "InspiroBot", description = f"hh", color=red)
-            embed.add_image(url=f"{gen}")
+          #  embed.add_image(url=f"{gen}")
 
     @commands.command()
     async def choose(self, ctx, *choices):
