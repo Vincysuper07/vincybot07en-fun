@@ -89,11 +89,11 @@ class Fun(Cog):
         """API by http://inspirobot.me"""
         response = await self.bot.session.get("https://inspirobot.me/api?generate=true")
         gen = (await response.content.readline()).decode('UTF-8')
-#        color = discord.Color.red()
-#        embed = discord.Embed(title = "InspiroBot", description = f"{gen}", color=color)
-#        embed.add_image(url=f"{gen}") # idk if thif works, i wrote it randomly
-#        await ctx.send(embed=embed)
-        await ctx.send(f"{gen}")
+        color = discord.Color.red()
+        embed = discord.Embed(title = "InspiroBot", description = f"{gen}", color=color)
+        embed.add_image(url=f"{gen}") # idk if thif works, i wrote it randomly
+        await ctx.send(embed=embed)
+#        await ctx.send(f"{gen}")
 
     @commands.command()
     async def choose(self, ctx, *choices):
