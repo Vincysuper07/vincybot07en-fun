@@ -84,7 +84,7 @@ class Fun(Cog):
         self.bot = bot
         #self.db = bot.plugin_db.get_partition(self)
         
-      @commands.command(aliases=["inspiro"])
+      @commands.command()
       async def inspirobot(self, ctx):
             """API by http://inspirobot.me"""
             response = await self.bot.session.get("https://inspirobot.me/api?generate=true")
