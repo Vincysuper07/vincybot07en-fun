@@ -89,7 +89,7 @@ class Fun(Cog):
         """API by http://inspirobot.me"""
         response = await self.bot.session.get("https://inspirobot.me/api?generate=true")
         gen = (await response.content.readline()).decode('UTF-8')
-        color = discord.Color.green()
+        color = 0x1E9705
         e = discord.Embed(title = "InspiroBot", color=color)
         e.set_image(url=f"{gen}")
         await ctx.send(embed=e)
