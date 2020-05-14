@@ -91,7 +91,7 @@ class Fun(Cog):
         gen = (await response.content.readline()).decode('UTF-8')
         color = discord.Color.red()
         embed = discord.Embed(title = "InspiroBot", description = f"{gen}", color=color)
-        embed.add_image(url=f"{gen}") # idk if thif works, i wrote it randomly
+        embed.set_image(url=f"{gen}") # idk if thif works, i wrote it randomly
         await ctx.send(embed=embed)
 #        await ctx.send(f"{gen}")
 
