@@ -84,13 +84,13 @@ class Fun(Cog):
         self.bot = bot
         #self.db = bot.plugin_db.get_partition(self)
         
-    @commands.command()
-    async def inspirobot(self, ctx):
+    @commands.command(name="inspirobot", aliases=["inspiro"])
+    async def _inspirobot(self, ctx):
         """API by http://inspirobot.me"""
         response = await self.bot.session.get("https://inspirobot.me/api?generate=true")
         gen = (await response.content.readline()).decode('UTF-8')
-#        red = discord.Color.red()
-#        embed = discord.Embed(title = "InspiroBot", description = f"{gen}", color=red)
+#        color = discord.Color.red()
+#        embed = discord.Embed(title = "InspiroBot", description = f"{gen}", color=color)
 #        embed.add_image(url=f"{gen}") # idk if thif works, i wrote it randomly
 #        await ctx.send(embed=embed)
         await ctx.send(f"{gen}")
