@@ -162,26 +162,7 @@ class Fun(Cog):
             await ctx.send((choice(self.ball) if question != "testù?" else "testù, testù, testù testù! testù testù testù"))
         else:
             await ctx.send("That doesn't look like a question.")
-
-    @commands.command(aliases=["badjoke"])
-    async def dadjoke(self,ctx):
-        """Gives a random Dadjoke"""
-        x = Dadjoke()
-        await ctx.send(x.joke)
         
-    @commands.command()
-    async def lmgtfy(self, ctx, *, search_terms: str):
-        """Create a lmgtfy link."""
-        search_terms = escape(
-            search_terms.replace("+", "%2B").replace(" ", "+"), mass_mentions=True
-        )
-        await ctx.send("<https://lmgtfy.com/?q={}>".format(search_terms))
-        
-    @commands.command()
-    async def say(self,ctx,* ,message):
-        """Make the bot say something"""
-        msg = escape(message,mass_mentions=True)
-        await ctx.send(msg)
     @commands.command()
     async def reverse(self, ctx, *, text):
         """!txeT ruoY esreveR"""
